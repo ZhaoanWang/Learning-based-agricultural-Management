@@ -361,3 +361,5 @@ if part:
     plt.savefig(str(year)+'MDP DQN part Training Rewards.jpg')
 else:
     plt.savefig(str(year)+'MDP DQN all Training Rewards.jpg')
+# Cleanup
+env.close()
