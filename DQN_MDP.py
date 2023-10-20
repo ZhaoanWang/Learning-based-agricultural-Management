@@ -216,14 +216,13 @@ for i in range(6000):
         if done:
             break
         istage = nstate['istage']
-        if istage == 6:
-            icheck += 1
-            print(r)
+
         if icheck == 2:
-            episode_reward_sum += r
 
             break
         else:
+            if istage == 6:
+            icheck += 1
             weight=nstate['grnwt']
             if part:
                 s_ = [nstate['cumsumfert'], nstate['dap'],
@@ -303,12 +302,11 @@ for tt in range(1):
         if done:
             break
         istage=state['istage']
-        if istage == 6:
-            icheck +=1
         if icheck == 2:
             break
         else:
-
+            if istage == 6:
+                icheck +=1
             at = atr['anfer']
             DQNfertuse.append(at)
             ferttotle = state['cumsumfert']
