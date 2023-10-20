@@ -264,13 +264,11 @@ for i in range(6000):
         if done:
             break
         istage = state['istage']
-        if istage == 6:
-            icheck += 1
         if icheck == 2:
-            episode_reward_sum += r
             break
         else:
-
+            if istage == 6:
+                icheck += 1
             if part:
 
                 next_state = [state['cumsumfert'], state['dap'],
@@ -362,13 +360,12 @@ for ii in range(1):
         if done:
             break
         istage = state['istage']
-        if istage == 6:
-            icheck += 1
         if icheck == 2:
-            episode_reward_sum += r
+            #episode_reward_sum += r
             break
         else:
-
+            if istage == 6:
+                icheck += 1
             if part:
 
                 next_state = [state['cumsumfert'], state['dap'],
